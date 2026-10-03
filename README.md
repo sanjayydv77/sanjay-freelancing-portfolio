@@ -25,8 +25,5 @@ A high-performance, dark-themed personal portfolio built for conversion and desi
 3. Start the dev server: `npm run dev`
 4. Build for production: `npm run build`
 
-## 📧 Contact Routing
-The contact form uses Web3Forms. To route the emails to your own inbox, update the `access_key` in `src/components/Contact.jsx` with your own key from Web3Forms.
-
 ---
-*Designed & Engineered for High-End Freelancing.*
+A product built with ❤️By Sanjay Yadav
