@@ -1,4 +1,4 @@
-# Sanjay.dev - Premium Freelance Portfolio
+# Sanjay.dev - Freelance Portfolio
 
 A high-performance, dark-themed personal portfolio built for conversion and designed to establish authority as a freelance software developer. 
 
