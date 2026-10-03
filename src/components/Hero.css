@@ -1,0 +1,276 @@
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 120px; /* Offset for floating navbar */
+  background: url('../assets/trees-bg.png') bottom center / 100% auto no-repeat, linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  z-index: 10;
+  width: 100%;
+}
+
+.hero-text-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-main);
+  text-transform: uppercase;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.hero-section .section-topper {
+  color: var(--text-main);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.hero-text {
+  font-size: 1.15rem;
+  margin-bottom: 2.5rem;
+  color: var(--text-muted);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.btn-transparent {
+  background: transparent;
+  color: var(--text-main);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+}
+
+.btn-transparent:hover {
+  color: var(--primary);
+}
+
+/* Image Wrapper */
+.hero-image-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-profile-img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 20px;
+  z-index: 2;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  animation: float 6s ease-in-out infinite;
+}
+
+.image-glow {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background: var(--primary);
+  filter: blur(100px);
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: 1;
+  animation: pulse 4s ease-in-out infinite alternate;
+}
+
+/* Wave */
+.hero-wave {
+  position: absolute;
+  bottom: -2px; /* Fix for pixel gap */
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+  max-height: 200px;
+  z-index: 5;
+  color: var(--bg-darker); /* Matches the next section's bg */
+}
+
+body:not(.dark-mode) .hero-wave {
+  color: #ffffff; /* Adjust based on next section in light mode */
+}
+
+/* --- Dark Mode Universe Animations --- */
+.dark-mode-animations {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+body.dark-mode .dark-mode-animations {
+  display: block;
+}
+
+/* Stars */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  animation: twinkle 4s infinite linear;
+}
+
+.star1 { top: 10%; left: 20%; animation-delay: 0s; }
+.star2 { top: 30%; left: 80%; animation-delay: 1s; }
+.star3 { top: 60%; left: 10%; animation-delay: 2s; }
+.star4 { top: 80%; left: 70%; animation-delay: 3s; }
+.star5 { top: 20%; left: 50%; animation-delay: 1.5s; width: 3px; height: 3px; }
+.star6 { top: 70%; left: 40%; animation-delay: 0.5s; }
+.star7 { top: 40%; left: 90%; animation-delay: 2.5s; }
+.star8 { top: 90%; left: 20%; animation-delay: 3.5s; width: 4px; height: 4px; }
+.star9 { top: 15%; left: 85%; animation-delay: 0.8s; }
+
+/* Shooting Stars */
+.shooting-star {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
+  animation: shoot 5s infinite linear;
+  opacity: 0;
+}
+
+.shooting-star::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 150px;
+  height: 1px;
+  background: linear-gradient(90deg, #fff, transparent);
+}
+
+.shooting-star2 {
+  top: 30%;
+  left: 80%;
+  animation-delay: 2.5s;
+}
+
+/* UFO */
+.ufo-wrapper {
+  position: absolute;
+  top: 20%;
+  left: -10%;
+  font-size: 2rem;
+  animation: ufo-fly 20s linear infinite;
+  z-index: 2;
+  filter: drop-shadow(0 0 10px var(--primary));
+}
+
+.ufo {
+  animation: float-ufo 3s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes float-ufo {
+  0% { transform: translateY(0px) rotate(-5deg); }
+  50% { transform: translateY(-15px) rotate(5deg); }
+  100% { transform: translateY(0px) rotate(-5deg); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.3; }
+  100% { transform: scale(1.2); opacity: 0.5; }
+}
+
+@keyframes twinkle {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes shoot {
+  0% {
+    transform: translateX(0) translateY(0) rotate(-45deg);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(-300px) translateY(300px) rotate(-45deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-300px) translateY(300px) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes ufo-fly {
+  0% { transform: translateX(0) scale(0.5); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(120vw) scale(1); opacity: 0; }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 4rem;
+  }
+
+  .hero-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .hero-profile-img {
+    max-width: 300px;
+  }
+}
