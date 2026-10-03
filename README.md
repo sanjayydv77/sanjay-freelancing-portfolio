@@ -1,16 +1,32 @@
-# React + Vite
+# Sanjay.dev - Premium Freelance Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A high-performance, dark-themed personal portfolio built for conversion and designed to establish authority as a freelance software developer. 
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Ultra-Premium Dark UI**: Glassmorphism, deep gradients, and parallax scrolling to create an "After Dark" aesthetic.
+- **Lightning Fast**: Built with React and Vite for optimal performance and near-instant load times.
+- **Zero-Maintenance Backend**: Integrated Web3Forms for a seamless, serverless contact form that routes directly to email.
+- **Responsive Layout**: Pixel-perfect design that scales beautifully from mobile to massive 4K desktop screens.
+- **Trust-Building Case Studies**: Professionally articulated real-world projects that emphasize business ROI, security, and scalability.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React, JavaScript (ES6+)
+- **Build Tool**: Vite
+- **Styling**: Vanilla CSS (CSS Variables, Flexbox, Grid)
+- **Icons**: Lucide React, React Icons
+- **Deployment**: Vercel
 
-## Expanding the Oxlint configuration
+## 🏃‍♂️ Running Locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start the dev server: `npm run dev`
+4. Build for production: `npm run build`
+
+## 📧 Contact Routing
+The contact form uses Web3Forms. To route the emails to your own inbox, update the `access_key` in `src/components/Contact.jsx` with your own key from Web3Forms.
+
+---
+*Designed & Engineered for High-End Freelancing.*

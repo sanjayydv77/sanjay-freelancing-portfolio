@@ -12,7 +12,6 @@
   "dependencies": {
     "@react-three/drei": "^10.7.9",
     "@react-three/fiber": "^9.8.1",
-    "@rolldown/binding-win32-x64-msvc": "^1.2.12",
     "framer-motion": "^14.0.0",
     "lucide-react": "^1.51.0",
     "react": "^19.2.8",
