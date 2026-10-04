@@ -31,7 +31,7 @@ function App() {
       <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
 
       <main>
-        {/* <Hero /> */}
+        <Hero />
         <Services />
         <Seo />
         <GoogleAds />
